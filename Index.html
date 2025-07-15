@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍎</div>
+            <ul class="nav-menu">
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <div class="nav-icons">
+                <span class="search-icon">🔍</span>
+                <span class="cart-icon">🛒</span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>iPhone 15 Pro</h1>
+            <p class="subtitle">Titan. So stark. So leicht. So Pro.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Mehr erfahren</a>
+                <a href="#" class="btn-secondary">Kaufen</a>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="product-card">
+                <h2>MacBook Air</h2>
+                <p>Unfassbar dünn. Unglaublich leistungsstark.</p>
+                <div class="product-image">💻</div>
+                <div class="product-links">
+                    <a href="#">Mehr erfahren</a>
+                    <a href="#">Kaufen</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h2>iPad Pro</h2>
+                <p>Supercharged by M2.</p>
+                <div class="product-image">📱</div>
+                <div class="product-links">
+                    <a href="#">Mehr erfahren</a>
+                    <a href="#">Kaufen</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+```
+
+**2. styles.css**
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    color: #1d1d1f;
+    background-color: #000;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    height: 44px;
+}
+
+.logo {
+    font-size: 18px;
+    color: #f5f5f7;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 1;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 18px;
+    color: #f5f5f7;
+    font-size: 14px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 28px;
+    line-height: 1.10722;
+    font-weight: 400;
+    letter-spacing: 0.004em;
+    margin-bottom: 18px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    padding: 12px 24px;
+    border-radius: 980px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0071e3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0077ed;
+}
+
+.btn-secondary {
+    color: #0071e3;
+    border: 1px solid #0071e3;
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #0071e3;
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 12px;
+    padding: 0 12px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding: 58px 40px 64px;
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    margin-bottom: 4px;
+}
+
+.product-card p {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.product-image {
+    font-size: 80px;
+    margin: 40px 0;
+    opacity: 0.6;
+}
+
+.product-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    position: relative;
+}
+
+.product-links a::after {
+    content: " ›";
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.product-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .subtitle {
+        font-size: 19px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .product-card {
+        padding: 40px 20px 50px;
+    }
+    
+    .product-card h2 {
+        font-size: 28px;
+    }
+}
+```
